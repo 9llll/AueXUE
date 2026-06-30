@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "include": [
+    "/api/*",
+    "/atom.xml",
+    "/*.html"
+  ],
+  "exclude": [
+    "/baidu_verify_codeva-WzoodkR3hT.html",
+    "/index.html"
+  ]
+}

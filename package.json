@@ -1,0 +1,71 @@
+{
+  "name": "aiovtue-blog",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/move-posts-to-content.mjs && node scripts/generate-icons-css.mjs && valaxy build",
+    "build:ssg": "node scripts/build-ssg.mjs",
+    "build:ssg:raw": "valaxy build --ssg",
+    "migrate:posts": "node scripts/migrate-posts-to-r2.mjs",
+    "migrate:posts:local": "node scripts/migrate-posts-to-r2.mjs --local",
+    "migrate:links": "node scripts/migrate-links-to-r2.mjs",
+    "migrate:links:local": "node scripts/migrate-links-to-r2.mjs --local",
+    "migrate:about": "node scripts/migrate-about-to-r2.mjs",
+    "migrate:about:local": "node scripts/migrate-about-to-r2.mjs --local",
+    "migrate:gallery": "node scripts/migrate-gallery-to-r2.mjs",
+    "migrate:gallery:local": "node scripts/migrate-gallery-to-r2.mjs --local",
+    "migrate:notice": "node scripts/migrate-notice-to-d1.mjs",
+    "migrate:notice:local": "node scripts/migrate-notice-to-d1.mjs --local",
+    "d1:migrate": "npx wrangler d1 migrations apply aiovtue-blog --remote",
+    "d1:migrate:local": "npx wrangler d1 migrations apply aiovtue-blog --local",
+    "d1:backfill-taxonomy": "node scripts/backfill-taxonomy.mjs",
+    "d1:backfill-taxonomy:local": "node scripts/backfill-taxonomy.mjs --local",
+    "move:posts": "node scripts/move-posts-to-content.mjs",
+    "dev:cf": "node scripts/dev-cloudflare.mjs",
+    "dev:cf:lite": "node scripts/dev-cloudflare.mjs --lite",
+    "pages:dev": "node scripts/dev-cloudflare.mjs",
+    "fuse": "valaxy fuse",
+    "dev": "node scripts/move-posts-to-content.mjs && node scripts/generate-icons-css.mjs && valaxy",
+    "rss": "valaxy rss",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "echarts": "4.9.0",
+    "fuse.js": "^7.4.1",
+    "lxgw-wenkai-screen-webfont": "1.7.0",
+    "markdown-it": "^14.2.0",
+    "pixi-live2d-display": "^0.4.0",
+    "pixi.js": "^8.19.0",
+    "twikoo": "1.6.44",
+    "valaxy": "0.28.10",
+    "valaxy-addon-hitokoto": "^0.0.1",
+    "valaxy-addon-live2d": "^0.4.0",
+    "valaxy-addon-meting": "^0.2.0",
+    "valaxy-addon-twikoo": "^0.0.4",
+    "valaxy-addon-vercount": "^0.0.7",
+    "valaxy-addon-waline": "^0.2.1",
+    "valaxy-theme-sakura": "latest",
+    "vditor": "^3.11.2",
+    "vue": "^3.5.38",
+    "vue-router": "^5.1.0",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@iconify-json/ant-design": "^1.2.5",
+    "@iconify-json/fa6-solid": "^1.2.3",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/ri": "^1.2.10",
+    "@iconify/utils": "^3.1.3",
+    "@unocss/preset-icons": "^66.5.10",
+    "playwright": "^1.60.0",
+    "typescript": "^5.9.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "@parcel/watcher",
+      "typeit"
+    ]
+  }
+}
