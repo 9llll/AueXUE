@@ -145,7 +145,7 @@ export default defineValaxyConfig({
     },
 
     postList: {
-      defaultImage: '/default-cover.png',
+      defaultImage: '/default-cover.png', //文章默认封面
     },
 
     
