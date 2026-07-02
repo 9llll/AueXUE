@@ -6,11 +6,11 @@ pages_build_output_dir = "dist"
 [[d1_databases]]
 binding = "DB"   # 这个不能动
 database_name = "aiovtue-blog"   # 名字不一样也要改，最好一样
-database_id = "221c5bca-6857-4435-ae6e-e7c613adab23"  # 数据库id改成自己的
+database_id = "f04b8339-cb56-4cc7-80b3-9b28c769f401"  # 数据库id改成自己的
 
 [[r2_buckets]]
 binding = "BUCKET"   # 这个不能动
 bucket_name = "aiovtue-blog"   # 名字不一样也要改，最好一样
 
 [vars]
-SITE_URL = "https://live.yybb.us"
+SITE_URL = "https://moci.cc.cd"
